@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "node scripts/compile.js",
+    "pretest": "yarn compile",
+    "test": "mocha tests",
+    "predeploy": "yarn compile",
     "deploy": "node scripts/deploy.js"
   },
   "keywords": [],
@@ -16,5 +18,9 @@
     "solc": "^0.4.25",
     "truffle-hdwallet-provider": "0.0.3",
     "web3": "1.0.0-beta.34"
+  },
+  "devDependencies": {
+    "ganache-cli": "^6.1.8",
+    "mocha": "^5.2.0"
   }
 }
