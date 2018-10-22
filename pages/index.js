@@ -1,7 +1,16 @@
 import React from 'react'
+import Button from '@material-ui/core/Button'
 
-export default class Index extends React.Component {
+import Layout from '../components/Layout'
+
+class Index extends React.Component {
     render() {
-        return <div>Welcome to Ethereum ICO DApp</div>
+        return (
+            <Layout>
+                <Button variant="contained" color="primary">Welcome to Ethereum ICO DApp!</Button>
+            </Layout>
+        )
     }
 }
+
+export default Index
